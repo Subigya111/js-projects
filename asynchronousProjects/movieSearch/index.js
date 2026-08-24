@@ -4,7 +4,7 @@ const p=document.getElementById("p");
 const image=document.getElementById("image");
 async function getMovie(){
     p.innerText="Loading..."
-    const response=await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=635df62d&s=${input.value}`)
+    const response=await fetch(`https://www.omdbapi.com/?apikey=${input.value}`)
     const data= await response.json();
     if(response.ok===false){
         p.innerText="Something went wrong";
